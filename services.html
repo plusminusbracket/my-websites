@@ -11,27 +11,108 @@
     <style>
         /* Base Reset */
         * {
-            margin: 0;
+            margin: 0; margin-left: 5;margin-right: 5;margin-bottom: auto;
             padding: 0;
             box-sizing: border-box;
         }
         body {
-            background-color: #f7f4ef; /* Deep premium black */
-            color: #1a1a1a; /* Soft, readable off-white */
+            background-color: #caba97; /* Light orange oat */
+            text-color: #434342; /* Soft, readable off-white */
             font-family: 'Cormorant Garamond', sans-serif;
             line-height: 1.7;
             padding-bottom: 60px;
         }
         
 
-        /* Editorial Navigation Bar */
+        /*Navigation Bar */
         nav {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 30px 10%;
-            border-bottom: 1px solid #dcd7cc(255, 255, 255, 0.1);
+            flex-direction:column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 40px 20px;
+            position:fixed;
+            top:0;
+            left:0; 
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+            left:0;
+            height:100vh;
+            width:250px;
+            overflow-y:auto;
+            border-right: 1px solid rgba(220,215,204,0.1);
              }
+
+             .nav a {display:block;
+                padding:10px 0;
+                text-decoration:none;
+                font-size:18px;
+                color:#ffff;
+                font-weight:bold;
+                text-transform:uppercase;
+            }
+
+             .nav-links{list-style:none;
+                padding:0;
+                margin:20px 0 0 0;
+                width:100%;
+            }
+
+             .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                flex-direction:column;justify-content:center;align-items:flex-start;padding-left:20px;transition: 0.3s;}.sidenav a:hover {
+                color: #f1f1f1;}.sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+                width:250px;min-width:200px;
+            }
+.bar h1, .bar h2,.bar h3 a {white-space:nowrap;line-height:1.4;margin-bottom:15px;}
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+@media screen and (max-height: 450px) {
+  .container {
+  display: inline-block;
+  cursor: pointer;} 
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}.sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}}
+           
+            .container{
+                position:relative;text-align:center; color:white;
+                height:100px; width: 100%; 
+            } 
+            
+
+        
         .logo {
             font-family: 'Playfair Display', serif;
             font-size: 24px;
@@ -40,12 +121,12 @@
             text-transform:uppercase;
             color: #d4af37;
         }
+        .logo,.nav-links{display:block;margin-bottom:25px;}
         .nav-links a {
             font-family:'Montserrat', sans serif;
             color: #4a4a4a;
-            text-decoration: none;
-            margin-left: 35px;
-            font-size: 11px;
+            text-decoration:none;display:flex;gap:20px;list-style:none;margin:0;padding:0;
+            top:150px; right: 25px;font-size: 18px;margin-left: 10px;
             letter-spacing: 2px;
             text-transform: uppercase;
             transition: color 0.3s ease;
@@ -53,7 +134,7 @@
         .nav-links a:hover {
             color: #8c764d;
         }
-        .container{max-width:750px;margin:100px auto;padding:0 20px;tezt-align-center;}h1 {
+        .container{max-width:750px;margin:100px auto;padding:0 20px;text-align:center;}h1 {
             font-size: 52px;
             font-weight: 400;
             font-style: italic;
@@ -61,10 +142,10 @@
         }
         .subtitle {
             font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
+            font-size: 15px;
             letter-spacing: 4px;
             text-transform: uppercase;
-            color: #8c764d; /* Muted vintage gold */
+            color: #20192e; /* Muted vintage purple */
             margin-bottom: 60px;
         }
 
@@ -83,7 +164,7 @@
         }
         .service-item {
             margin-bottom: 40px;
-            border-bottom: 1px dashed #dcd7cc;
+            border-bottom: 1px dashed #181715;
             padding-bottom: 25px;
         }
         .service-item h3 {
@@ -100,7 +181,7 @@
         p.description {
             font-size: 19px;
             font-style: italic;
-            color: #333333;
+            color: #0c0c0c;
             max-width: 650px;
             margin: 0 auto 80px auto;
             line-height: 1.8;
@@ -122,15 +203,18 @@
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="origin.html">Origin</a>
-            <a href="services.html" style="color: #d4af37;">Services</a>
+            <a href="services.html" style="color: #f6eed4;">Services</a>
             <a href="index.html#gallery-section">Gallery</a>
             <a href="inquiry.html" class="contact-btn">Contact</a>
         </div>
     </nav>
-
+    
+    </main>
     <!-- Main Core Page Layout Section -->
     <div class="container">
+        <main class="content-area">
         <h1>Services</h1>
+        <p>
         <div class="subtitle">Key Services Breakdown</div>
 
         <ul>
@@ -151,6 +235,6 @@
                 Providing rigorous forensic verification services.
             </li>
         </ul>               <br><p style="font-family:'Inter'; font-size:20px;">
-<br><br><p class="descrition">We curate the extraordinary for the world's most discerning horologists. As an elite luxury watch collecting house, we bridge the gap between historical mastery and personalized modern luxury. Our global sourcing network grants serious collectors exclusive access to rare, investment-grade vintage timepieces and highly coveted modern hard-to-finds. Beyond acquisition, we offer bespoke watchmaking services, collaborating with master artisans in Switzerland to design and build custom Swiss watches tailored to your exact specifications. Whether you are hunting for an elusive reference to complete your collection or commissioning a one-of-one custom masterpiece, our house provides the ultimate tailored horological experience.</p></body>
+<br><br><p class="descrition">We curate the extraordinary for the world's most discerning horologists. As an elite luxury watch collecting house, we bridge the gap between historical mastery and personalized modern luxury. Our global sourcing network grants serious collectors exclusive access to rare, investment-grade vintage timepieces and highly coveted modern hard-to-finds. Beyond acquisition, we offer bespoke watchmaking services, collaborating with master artisans in Switzerland to design and build custom Swiss watches tailored to your exact specifications. Whether you are hunting for an elusive reference to complete your collection or commissioning a one-of-one custom masterpiece, our house provides the ultimate tailored horological experience.</p></p></body>
         <footer text-align:"center">An Archival Collection</footer>
 </html>

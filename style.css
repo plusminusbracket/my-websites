@@ -1,0 +1,261 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+  @import url("https://googleapis.com");
+
+  body, html{
+                font-family: 'DM Serif Display', DM Sans, Inter;
+                height: 100%;
+                margin:0%;
+  }
+
+  body{
+                margin:0;padding:0;
+                font-family:'DM Serif Display', DM Sans, Inter;
+                background-color: white;
+                color:#1a1a1a;
+                line-height:1.6
+  }
+
+  /*Layout Containers*/
+#main {
+  width:100%
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) 
+  
+.container {
+  max-width:1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/*Components and Navigation*/
+.sidenav {
+  height:100vh;
+  width:0;
+  position:fixed;
+  z-index:1001;
+  top:0;
+  left:0;
+  height: 100%;
+  width:0; 
+  background-color: #111111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s; 
+}
+
+.menu-button{
+  position:fixed;
+  top:25px;
+  left:30px;
+  z-index:1000;
+  font-size:32px;
+  color:#1a1a1a;
+  display:inline-block;
+  position:relative;
+  cursor:pointer;
+  background:none;
+  border:none;
+  z-index:99999;
+  pointer-events:auto;
+}
+
+.cta-button{
+  padding:12px 28px;
+  background-color: brown; 
+  color:white;
+  font-family: 'DM Serif Display',DM Sans, Inter;
+  font-size:0.9rem;
+  text-transform: uppercase;letter-spacing: 1.5px; 
+  border:none; 
+  cursor:pointer;
+  transition:background-color 0.3s ease;
+}
+
+.cta-button:hover{
+  background-color:transparent;
+  text-decoration-color:white;
+}
+            
+                header{position:absolute;top:0;left:0; width:100%;z-index:10;padding:20px;box-sizing:border-box;} .menu-button{font-size:30px; cursor:pointer;color:white;}
+                          
+/*PAGE SPECIFIC SECTIONS*/
+.hero-container{
+  position:relative;
+  width:100%;
+  height:60vh;
+  overflow:hidden;
+}
+            
+.hero-image{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url("hero_image.jpg");
+  width: 100%;
+  height: 100%;
+  height:50vh;
+  display:flex;
+  background-image:url("../Images/hero_image.jpg");
+  background-size:cover;
+  background-position:center;
+  align-items:center;
+  justify-content:center;
+  background-repeat:no-repeat;
+  background-size: cover;
+  position: relative;
+  filter:brightness(0.85);
+}
+
+.responsive{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.hero-overlay-content{
+  position:absolute;
+  bottom:40px;
+  right:10%;
+  color:white;
+  z-index:10;
+}
+
+.hero-overlay-content h1{
+  font-family:'DM Serif Display',DM Sans, Inter;
+  font-size:3.5rem;
+  margin:0 0 5px 0;
+  font-weight:400;
+}
+
+.tagline{
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  opacity:0.9;
+}
+
+.hero-text {
+  text-align:left;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  color:white;
+}            
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;}.sidenav a:hover {
+  color: #f1f1f1;}.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}.sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}}
+           .my_photo{
+                height: 150px; width: 100%; object-fit: cover;
+            }
+            .container{
+                position:relative;text-align:center; color:white;
+                height:100px; width: 100%; 
+            } 
+            .bottom-right{position:absolute;bottom:8px;right:16px;}
+            .top-right{position:absolute;top:8px;right:16px;}
+
+        
+           
+            
+            
+            
+
+            /* The hero image */
+
+                *{
+                  box-sizing:border-box;
+                }             
+  .container{
+      position: relative; 
+  }
+
+.mySlides {
+  display: none;
+}
+.cursor{cursor:pointer;}
+.prev,.next{cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;}.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}.prev:hover,
+.next:hover {
+  background-color: rgba(61, 4, 4, 0.8);}.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+} .column {
+  float: left;
+  width: 16.66%;
+} .demo {
+  opacity: 0.6;
+}.active,
+.demo:hover {
+  opacity: 1;
+}            
